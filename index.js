@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 const morgan = require('morgan');
 const app = express();
 const routes = require('./src/routes');
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 require('dotenv').config();
 
 mongoose.set('useFindAndModify', false);
